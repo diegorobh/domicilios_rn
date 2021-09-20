@@ -6,6 +6,8 @@ import FlatListComponent from "./src/screens/FlatListComponent";
 import ImageScreen from "./src/screens/ImageScreen";
 import CounterComponent from "./src/screens/Components/CounterComponent";
 import ColorComponent from "./src/screens/Components/ColorComponent";
+import Welcome from "./src/screens/Components/Welcome";
+
 
 const navigator = createStackNavigator(
   {
@@ -14,10 +16,11 @@ const navigator = createStackNavigator(
     FlatListComponent:FlatListComponent,
     ImageScreen,
     CounterComponent,
-    ColorComponent
+    ColorComponent,
+    Welcome
   },
   {
-    initialRouteName: "Home",
+    initialRouteName: "Welcome",
     defaultNavigationOptions: {
       title: "App",
     },
