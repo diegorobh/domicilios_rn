@@ -23,7 +23,7 @@ const navigator = createStackNavigator(
     Registro
   },
   {
-    initialRouteName: "Registro",
+    initialRouteName: "Login",
     defaultNavigationOptions: {
       title: "App",
     },
