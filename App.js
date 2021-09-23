@@ -7,7 +7,8 @@ import ImageScreen from "./src/screens/ImageScreen";
 import CounterComponent from "./src/screens/Components/CounterComponent";
 import ColorComponent from "./src/screens/Components/ColorComponent";
 import Welcome from "./src/screens/Components/Welcome";
-
+import Login from "./src/screens/Components/Login";
+import Registro from "./src/screens/Components/Registro";
 
 const navigator = createStackNavigator(
   {
@@ -17,10 +18,12 @@ const navigator = createStackNavigator(
     ImageScreen,
     CounterComponent,
     ColorComponent,
-    Welcome
+    Welcome,
+    Login,
+    Registro
   },
   {
-    initialRouteName: "Welcome",
+    initialRouteName: "Registro",
     defaultNavigationOptions: {
       title: "App",
     },
