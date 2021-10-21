@@ -2,7 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 import { ImageBackground, SafeAreaView, Image, Text, View, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import mainStyles from './main.css';
 
-const Registro = ()=>{
+const Registro = (props)=>{
     const [ nextStep, setNextStep ] = useState(false);
     const [ usuario, setUsuario ] = useState({
         tipo_documento:"",
@@ -24,6 +24,7 @@ const Registro = ()=>{
     }
 
     const handleActionButton = ()=>{
+        if(nextStep){ props.navigation.navigate("Domicilio") };
         const firstStepProperties = [ "tipo_documento", "numero_documento", "departamento", "municipio", "direccion" ];
         const fieldsEmpty = firstStepProperties.filter(propName => { return usuario[propName] == "" } );
         console.log("validateValues = ",fieldsEmpty)
@@ -31,8 +32,9 @@ const Registro = ()=>{
     }
 
     return (
-        <View style = { styles.container_all_centered } >
-            <ImageBackground style = {styles.bg_image_container} source = { require('./assets/backgroundApp/backgroundApp.png') } >
+        <ImageBackground style = {styles.bg_image_container} source = { require('./assets/backgroundApp/backgroundApp.png') } >
+        <View style = { [ styles.container_all_centered, styles.standartPaddingH ] } >
+            
 
                 { (nextStep)
                     ? <SecondStep onInputChange = { onInputChange } usuario = { usuario } />
@@ -40,11 +42,11 @@ const Registro = ()=>{
                 }
 
                 <TouchableOpacity style = { [ styles.primaryButton, styles.mt_5 ] } onPress = { handleActionButton } >
-                    <Text style = { styles.buttonTextSize } >{ (nextStep) ? "SIGUIENTE" : "SIGUIENTE" }</Text>
+                    <Text style = { styles.buttonTextSize } >{ (nextStep) ? "REGISTRAR" : "SIGUIENTE" }</Text>
                 </TouchableOpacity>
 
-                </ImageBackground>
         </View>
+        </ImageBackground>
     )
 }
                 //value = { usuario.tipo_documento }

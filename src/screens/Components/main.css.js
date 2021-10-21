@@ -14,8 +14,8 @@ const mainStyles = {
         justifyContent:"center",
         alignItems:"center",
         height: "100%",
-        padding:20,
-        resizeMode: 'contain'
+        resizeMode: 'contain',
+        //padding:45
     },
     white_text_container:{
         backgroundColor:"rgba(255, 255, 255, 1)",
@@ -73,6 +73,29 @@ const mainStyles = {
         color:"#243185",
         textAlign:"center"
     },
+    containerContentOverBottomBar:{
+        flex:1,
+        padding:12
+    },
+    containerViewWithBottomNav:{
+       flex:1,
+       width:"100%"
+    },
+    shortLine:{
+        width:50,
+        backgroundColor:"gray",
+        height:2
+    },
+    longLine:{
+        backgroundColor:"gray",
+        height:1
+    },
+    standartPaddingH:{
+        paddingHorizontal:25
+    },
+    standartPaddingH_2:{
+        paddingHorizontal:20
+    },
     mt_10:{
         marginTop:10
     },
@@ -84,8 +107,13 @@ const mainStyles = {
     },
     mb_5:{
         marginBottom:5
+    },
+    mt_2:{
+        marginTop:2
+    },
+    mb_2:{
+        marginBottom:2
     }
-    
 };
 
 

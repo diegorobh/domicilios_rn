@@ -9,6 +9,10 @@ import ColorComponent from "./src/screens/Components/ColorComponent";
 import Welcome from "./src/screens/Components/Welcome";
 import Login from "./src/screens/Components/Login";
 import Registro from "./src/screens/Components/Registro";
+import Domicilio from "./src/screens/Components/Domicilio";
+import DomicilioDetail from "./src/screens/Components/DomicilioDetail";
+import Reclamar from "./src/screens/Components/Reclamar";
+import ReclamoDetail from "./src/screens/Components/ReclamarDetail";
 
 const navigator = createStackNavigator(
   {
@@ -20,10 +24,14 @@ const navigator = createStackNavigator(
     ColorComponent,
     Welcome,
     Login,
-    Registro
+    Registro,
+    Domicilio,
+    DomicilioDetail,
+    Reclamar,
+    ReclamoDetail
   },
   {
-    initialRouteName: "Login",
+    initialRouteName: "Reclamar",
     defaultNavigationOptions: {
       title: "App",
     },
