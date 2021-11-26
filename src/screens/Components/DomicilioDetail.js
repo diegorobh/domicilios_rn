@@ -1,16 +1,24 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import MapComponent from './MapComponent';
 import { View, Text, StyleSheet, ImageBackground, Image } from 'react-native';
 import mainStyles from './main.css';
 import DomRectListChildStyles from './DomRectListChild.css';
 import MainBottomBar from './Includes/MainBottomBar/MainBottomBar';
 import DomicilioDetailStyles from './DomicilioDetail.css';
+import ActiveModule from './Contexts/ActiveModule';
 
 // const DomicilioDetail = ()=>{
 
 // }
 
 const DomicilioDetail = (props)=>{
+
+  const c_ActiveModule = useContext(ActiveModule);
+
+  useEffect(()=>{
+    console.log("c_ActiveModule desde DomicilioDetail ==================== ", c_ActiveModule);
+  })
+
     return (
       <ImageBackground style = {[ styles.bg_image_container, { padding:0, margin:0 } ]} source = { require('./assets/backgroundApp/backgroundApp.png') } >
       <View style = { [ styles.containerViewWithBottomNav, { backgroundColor:'white' } ] } >

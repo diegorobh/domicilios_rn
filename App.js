@@ -9,10 +9,13 @@ import ColorComponent from "./src/screens/Components/ColorComponent";
 import Welcome from "./src/screens/Components/Welcome";
 import Login from "./src/screens/Components/Login";
 import Registro from "./src/screens/Components/Registro";
+import RecordarPass from "./src/screens/Components/RecordarPass";
 import Domicilio from "./src/screens/Components/Domicilio";
 import DomicilioDetail from "./src/screens/Components/DomicilioDetail";
 import Reclamar from "./src/screens/Components/Reclamar";
 import ReclamoDetail from "./src/screens/Components/ReclamarDetail";
+import ActiveModule from "./src/screens/Components/Contexts/ActiveModule";
+import React, {Component, useState} from 'react';
 
 const navigator = createStackNavigator(
   {
@@ -25,17 +28,31 @@ const navigator = createStackNavigator(
     Welcome,
     Login,
     Registro,
+    RecordarPass,
     Domicilio,
     DomicilioDetail,
     Reclamar,
     ReclamoDetail
   },
   {
-    initialRouteName: "Reclamar",
+    initialRouteName: "RecordarPass",
     defaultNavigationOptions: {
       title: "App",
     },
   }
 );
 
-export default createAppContainer(navigator);
+const App = createAppContainer(navigator);
+
+export default ()=>{
+  const [value, setValue] = useState("DOMICILIO");
+  return(
+    <ActiveModule.Provider value={ {
+      setValue : (e)=>{ setValue(e) },
+      value
+    } }
+     >
+      <App />
+    </ActiveModule.Provider>
+  )
+};

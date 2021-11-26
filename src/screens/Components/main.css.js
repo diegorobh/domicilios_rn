@@ -59,6 +59,9 @@ const mainStyles = {
         borderRadius:10,
         padding:15,
     },
+    buttonTextSize:{
+        fontSize:unset
+    },
     whiteBoxText:{
         fontSize:16,
         color:"#8B8B8B"
