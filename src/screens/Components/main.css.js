@@ -60,7 +60,7 @@ const mainStyles = {
         padding:15,
     },
     buttonTextSize:{
-        fontSize:unset
+        fontSize:16
     },
     whiteBoxText:{
         fontSize:16,

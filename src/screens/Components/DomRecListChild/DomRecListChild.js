@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, StyleSheet, TouchableOpacity, Alert } from 'react-native';
 import { Avatar } from 'react-native-paper';
 import DomRectListChildStyles from './DomRectListChild.css';
-import mainStyles from './main.css';
+import mainStyles from '../main.css';
 
 const DomRecListChild = ({ id, registro, props })=>{
 

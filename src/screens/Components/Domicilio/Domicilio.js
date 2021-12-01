@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import MainBottomBar from './Includes/MainBottomBar/MainBottomBar';
-import mainStyles from './main.css';
+import MainBottomBar from '../Includes/MainBottomBar/MainBottomBar';
+import mainStyles from '../main.css';
 import { View, ImageBackground, FlatList } from 'react-native';
-import DomRecListChild from './DomRecListChild';
+import DomRecListChild from '../DomRecListChild/DomRecListChild';
 
 const Domicilio = (props)=>{
     const domicilios = [
@@ -16,7 +16,7 @@ const Domicilio = (props)=>{
         return <DomRecListChild id = { item.sampleKey } registro = { item } props = { props } />
     }
     return(
-        <ImageBackground style = {[ styles.bg_image_container, { padding:0, margin:0 } ]} source = { require('./assets/backgroundApp/backgroundApp.png') } >
+        <ImageBackground style = {[ styles.bg_image_container, { padding:0, margin:0 } ]} source = { require('../assets/backgroundApp/backgroundApp.png') } >
         <View style = { styles.containerViewWithBottomNav } >
             <View style = { styles.containerContentOverBottomBar } >
                 <FlatList

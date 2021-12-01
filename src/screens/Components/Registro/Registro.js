@@ -1,6 +1,6 @@
 import React, { Fragment, useState, useEffect } from 'react';
 import { ImageBackground, SafeAreaView, Image, Text, View, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
-import mainStyles from './main.css';
+import mainStyles from '../main.css';
 
 const Registro = (props)=>{
     const [ nextStep, setNextStep ] = useState(false);
@@ -32,7 +32,7 @@ const Registro = (props)=>{
     }
 
     return (
-        <ImageBackground style = {styles.bg_image_container} source = { require('./assets/backgroundApp/backgroundApp.png') } >
+        <ImageBackground style = {styles.bg_image_container} source = { require('../assets/backgroundApp/backgroundApp.png') } >
         <View style = { [ styles.container_all_centered, styles.standartPaddingH ] } >
             
 
